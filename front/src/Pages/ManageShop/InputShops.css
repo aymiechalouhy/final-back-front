@@ -1,0 +1,53 @@
+.xxxx{
+    padding-left: 10px;
+    
+}
+label{
+    color:#5d8fc9;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: medium;
+}
+.name{
+    color:black;
+    /* font-weight: bold; */
+    font-size: medium;
+}
+.ssbb{
+    display:flex;
+    justify-content: end;
+    padding-left: 500px;
+}
+
+.ssv{
+    font-size: larger;
+	font-weight: bold ;
+	color: white ;
+    background-color: #5d8fc9;
+    border: 2px solid white !important;
+}
+.ssv:hover{ 
+	color: #5d8fc9 ;
+    background-color: white;
+    border: 2px solid #5d8fc9 !important;
+}
+.bkk{
+    padding-right: 10px;
+    font-size: larger;
+	font-weight: bold ;
+	color: white ;
+    background-color: #5d8fc9;
+    border: 2px solid white !important; 
+}
+.bkk:hover{
+    color: #5d8fc9 ;
+    background-color: white;
+    border: 2px solid #5d8fc9 !important;
+}
+hr{
+    border: 2px solid #5d8fc9;
+}
+
+.ti h2{
+    color: #5d8fc9;
+}

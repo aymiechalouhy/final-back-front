@@ -1,0 +1,101 @@
+.main_footer {
+    padding-left: 90px;
+    padding-right: 90px;
+    background-color: black;
+    height: 310px;
+    margin-top: 1em;
+}
+
+.headerf h2 {
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+.colf-sm {
+    color: white !important;
+    text-align: center;
+    width: 100%;
+}
+#root > div.main_footer > div.displaying > div.inputData > div.firsttwo > div.colf1 > input[type=text]{
+/* #root>div>div>div.displaying>div>div.firsttwo>div.colf1>input[type=text] { */
+    background-color: black;
+    border: 2px solid #5d8fc9;
+    width: 120%;
+    height: 50px;
+    color: white;
+}
+
+#root > div.main_footer > div.displaying > div.inputData > div.secondtwo > div.colf3 > input[type=text] {
+    background-color: black;
+    border: 2px solid #5d8fc9;
+    width: 120%;
+    height: 50px;
+    color: white;
+}
+
+.inputData {
+    display: flex;
+    justify-content: space-around;
+}
+
+#root > div.main_footer > div.displaying > div.inputData > div.firsttwo > div.colf2 > input[type=text] {
+    background-color: black;
+    border: 2px solid #5d8fc9;
+    width: 120%;
+    height: 50px;
+    color: white;
+}
+
+#root > div.main_footer > div.displaying > div.inputData > div.secondtwo > div.colf4 > input[type=text] {
+    background-color: black;
+    border: 2px solid #5d8fc9;
+    width: 120%;
+    height: 50px;
+    color: white;
+}
+
+#root > div.main_footer > div.displaying > div.inputData > div.lastone > div > input[type=text] {
+    background-color: black;
+    border: 2px solid #5d8fc9;
+    width: 150%;
+    height: 125px;
+    color: white;
+    padding-left: 0%;
+}
+
+#root>div>div>div.displaying>div>div.secondtwo {
+    padding-right: 0%;
+    padding-left: 0%;
+}
+
+.send{
+    width: 50px;
+    padding-left: 73.5em;
+    padding-top: 10px;
+}
+.sn{
+    font-size: medium;
+    border: 2px solid #5d8fc9;
+    color:white;
+    background-color: black;
+}
+.sn:hover{
+    color: black;
+    background-color: white !important;
+}
+
+
+
+@media screen and (max-width:640px) {
+    .inputData {
+        display: flex;
+        flex-flow: column;
+    }
+    .main_footer {
+        height: 700px;
+    }
+    #root>div>div>div.displaying>div>div.lastone>div>input[type=text] {
+        width: 120%;
+    }
+}

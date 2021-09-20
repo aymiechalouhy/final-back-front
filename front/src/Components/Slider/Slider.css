@@ -1,0 +1,32 @@
+
+.carousel-wrapper{
+    display: grid;
+    position: relative;
+    width: auto;
+    height: auto;
+  
+  }
+  .carousel-wrapper img{
+      height:20em;
+      -o-object-fit: cover;
+         object-fit:cover;
+  }
+  .carousel-wrapper h1{
+      width:-webkit-fit-content;
+      width:-moz-fit-content;
+      width:fit-content;
+      color:beige;
+      position: absolute;
+      margin:2em 10em 30em 5em 
+  }    
+  
+  .carousel-wrapper h3{
+      width:-webkit-fit-content;
+      width:-moz-fit-content;
+      width:fit-content;
+       color:limegreen;
+       position:absolute;
+       margin:6em 10em 30em 5em;
+   
+  }
+  

@@ -1,0 +1,80 @@
+body {
+    background-color: #5d8fc9;
+}
+
+.wel{
+    color: black;
+}
+.btnn-primary {
+	font-size: larger;
+	font-weight: bold ;
+	width: 400px;
+	height: 37px;
+	color: white ;
+    background-color: #017BFF;
+    border: 2px solid transparent !important;
+	border-radius: 30px;
+}
+
+.btnn-primary:hover {
+   
+	color: black ;
+    background-color: #017BFF;
+}
+
+.wrapperr {	
+margin-top: 80px;
+margin-bottom: 80px;
+}
+
+.formm-signin {
+  max-width: 420px;
+  padding: 15px 35px 45px;
+  margin: 0 auto;
+  background-color: white;
+  border: 4px solid white; 
+  border-radius: 30px !important; 
+}
+::placeholder{
+	color: gray;
+}
+input:nth-child(2){
+	color: black !important;
+	font-weight: bold;
+}
+
+input:nth-child(5){
+	color: black !important;
+	font-weight: bold;
+}
+
+	.formm-control {
+	  background-color: #5d8fc9;
+	  position: relative;
+	  font-size: 16px;
+	  height: auto;
+	  padding: 10px;
+	  width: 24.5em;
+	  border: 2px solid white;
+	}
+	#root > div > div > div > form > input:nth-child(2){
+		border-radius: 30px !important;
+		background-color: #EBF0FC !important;
+	}
+	#root > div > div > div > form > input:nth-child(5){
+		border-radius: 30px;
+		/* border-color: black; */
+		background-color: #EBF0FC;
+	}
+
+	  @media screen and (max-width:640px ) {
+		.formm-control {
+			width: 24em;
+		  }
+ }
+
+ @media screen and (max-width:640px ) {
+	.formm-control {
+		width: 14em;
+	  }
+}

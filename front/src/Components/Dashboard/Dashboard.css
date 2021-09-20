@@ -1,0 +1,46 @@
+.dash{
+    width: 15rem;
+    height: 40rem;
+    border: transparent;
+    position: absolute;
+}
+
+.vl {
+    border-left: 6px solid white;
+    height: 600px;
+    margin-left: 5rem;
+    padding: 0%;
+}
+
+.ss {
+    font-size: 20px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-weight: bold;
+}
+
+.ss:hover {
+    color: black;
+}
+
+.dd {
+    font-size: 20px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-weight: bold;
+    margin-top: 2rem;
+}
+
+.dd:hover {
+    color: black;
+}
+
+.dash {
+    display: flex;
+}
+
+.fi {
+    padding: 4% 0% 0% 4%;
+}

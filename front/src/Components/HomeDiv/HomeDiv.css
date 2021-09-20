@@ -1,0 +1,13 @@
+.con{
+    height: 1000px;
+    background-color: #5d8fc9;
+}
+.big{
+    padding-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+h3 {
+    color: white;
+}
