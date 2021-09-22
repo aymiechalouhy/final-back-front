@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect } from "react";
 import { useHistory, useParams } from "react-router";
 import API from "../../API";
-
+import AdminNav from '../../Components/AdminNav/AdminNav';
 import Dashboard from "../../Components/Dashboard/Dashboard";
 
 export default function EditPost() {
@@ -54,7 +54,6 @@ export default function EditPost() {
       history.push({ pathname: "/listPost" })
     );
   }
-
   useEffect(() => {
     function fetchData() {
       API.get(`blogs/${id}`).then((res) => {
@@ -79,6 +78,7 @@ export default function EditPost() {
 
   return (
     <>
+    <AdminNav/>
       <Dashboard />
       <div className="xxxx">
         <div className="table-wrapper">

@@ -1,5 +1,6 @@
 import React, { useState, useContext } from "react";
 import API from "../../API";
+import Popup from 'reactjs-popup';
 import { useHistory } from "react-router-dom";
 
 import SessionContext from "../../Components/sessions/SessionContext";
@@ -8,6 +9,9 @@ import './Footer.css';
 import cb from '../../image/chooseBest.png';
 
 export default function Footer() {
+    <Popup trigger={<button> Trigger</button>} position="right center">
+    <div>Popup content here !!</div>
+  </Popup>
     const history = useHistory();
 
 
@@ -54,6 +58,7 @@ export default function Footer() {
           );
         }
 
+       
 
     return (
         <form onSubmit={handleSave}>
@@ -131,7 +136,7 @@ export default function Footer() {
                     </div>
                     </div>
 
-                    <div className="send">
+                    <div className="send">                
                         <button className="sn" type="submit"> SEND </button>
                     </div>
 
@@ -148,4 +153,5 @@ export default function Footer() {
         </div>
         </form>
     )
+ 
 }

@@ -3,7 +3,7 @@ import API from "../../API";
 import { useHistory } from "react-router-dom";
 
 import SessionContext from "../../Components/sessions/SessionContext";
-
+import AdminNav from '../../Components/AdminNav/AdminNav';
 import Dashboard from "../../Components/Dashboard/Dashboard";
 
 export default function AddPost() {
@@ -65,6 +65,7 @@ export default function AddPost() {
   }
   return (
     <>
+    <AdminNav/>
       <Dashboard />
       <div className="xxxx">
         <div className="table-wrapper">

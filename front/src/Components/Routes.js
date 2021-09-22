@@ -58,20 +58,26 @@ function PrivateRoute({ user, component: Comp, ...props }) {
 }
 
 function PublicRoute({ user, component: Comp, ...props }) {
+    console.log(user.role);
     return (
         <Route {...props} render={props => user.token ?
-            <Redirect {...props} to={user.role_id == "admin" ? "/admin/panel" : "/user/panel"} /> :
+            <Redirect {...props} to={user.role == "admin" ? "/listPost" : "/user/panel"} /> :
             <Comp {...props} />
         } />
     )
 }
 
+
+
 export default function Routes(props) {
     let { session: { user } } = useContext(SessionContext);
+
+    console.log(user);
     return (
         <Switch>
             <PublicRoute user={user} path="/" component={HomePage} exact {...props} />
             <PublicRoute user={user} path="/login" component={LoginPage} {...props} />
+            
             <PublicRoute user={user} path="/list" component={ListShops} {...props} />
             <PublicRoute user={user} path="/addShops" component={InputShops} {...props} />
             <PublicRoute user={user} path="/editShops/:id" component={UpdateShops} {...props} />
@@ -81,23 +87,14 @@ export default function Routes(props) {
 
             <PublicRoute user={user} path="/add/Post" component={AddPost} {...props} />
             <PublicRoute user={user} path="/listPost" component={ListPost} {...props} />
-            <PublicRoute user={user} path="/editPost/:id" component={EditPost} {...props} />4
+            <PublicRoute user={user} path="/editPost/:id" component={EditPost} {...props} />
 
             <PublicRoute user={user} path="/add/rate" component={AddRate} {...props} />
 
             <PublicRoute user={user} path="/listRate" component={ListRate} {...props} />
             
             <PublicRoute user={user} path="/listDevices" component={Devices} {...props} />
-            {/* <PublicRoute user={user} path="/register" component={Register} {...props} />
 
-            <PrivateRouteAdmin user={user} path="/admin/panel" component={Admin_Panel} {...props} />
-
-            <PrivateRouteUser user={user} path="/user/panel" component={User_Panel} {...props} />
-
-            <PrivateRoute user={user} path="/add/post" component={Add_Post} {...props} />
-            <PrivateRoute user={user} path="/list/post" component={List_Post} {...props} />
-            <PrivateRoute user={user} path="/edit/post" component={Edit_Post} {...props} /> */}
-            {/* <PrivateRouteAdmin user={user} path="/adminn" component={ManageShops} {...props} /> */}
         </Switch>
     )
 }

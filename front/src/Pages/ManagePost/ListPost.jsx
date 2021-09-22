@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import API from "../../API";
 
+import AdminNav from '../../Components/AdminNav/AdminNav';
+
 import Dashboard from '../../Components/Dashboard/Dashboard';
 
 export default function ListPost() {
@@ -34,6 +36,7 @@ export default function ListPost() {
     
     return (
        <>
+       <AdminNav/>
        <Dashboard/>
        <div className="container">
         <div className="table-wrapper">
@@ -62,6 +65,8 @@ export default function ListPost() {
                         <th>battery</th>
                         <th>price</th>
                         <th>quantity</th>
+                        <th>username</th>
+                        <th>Store Address</th>
                         <th>Actions</th>
                     </tr>            
                 </thead>
@@ -79,6 +84,8 @@ export default function ListPost() {
                         <td>{blog.battery}</td>
                         <td>{blog.price}</td>
                         <td>{blog.quantity}</td>
+                        {/* <td>{blog._User.username}</td>
+                        <td>{blog._User.storeAddress}</td> */}
                         <td></td>
                         <td>
 							{/* <a className="add" title="Add" data-toggle="tooltip"><i className="material-icons"></i></a> */}

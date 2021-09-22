@@ -2,7 +2,7 @@ import React, { useState, useContext, useEffect } from "react";
 import { useHistory, useParams } from "react-router";
 import API from "../../API";
 
-
+import AdminNav from '../../Components/AdminNav/AdminNav';
 import Dashboard from "../../Components/Dashboard/Dashboard";
 import "./InputShops.css";
 
@@ -75,6 +75,7 @@ export default function UpdateShops() {
 
   return (
     <>
+    <AdminNav/>
       <Dashboard />
       <div className="xxxx">
         <div className="table-wrapper">

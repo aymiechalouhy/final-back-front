@@ -1,12 +1,16 @@
 const Blog = require('../models/Blog');
 class BlogsController {
 
+
+
+
     getAll(req, res, next) {
-        Blog.find({}, (err, response) => {
+        Blog.find({}).populate('_User').exec((err, response) => {
             if (err) return next(err);
             res.status(200).send(response);
         })
     }
+
 
     get(req, res, next) {
         let { id } = req.params;

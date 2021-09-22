@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import API from "../../API";
-
+import AdminNav from '../../Components/AdminNav/AdminNav';
 import Dashboard from '../../Components/Dashboard/Dashboard';
 import './ListShops.css';
 
@@ -35,6 +35,7 @@ export default function ListShops() {
     
     return (
        <>
+       <AdminNav/>
        <Dashboard/>
        <div className="container">
         <div className="table-wrapper">

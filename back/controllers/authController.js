@@ -48,6 +48,7 @@ class AuthController {
 
     async signIn(req, res, next) {
         let { username, password } = req.body;
+        
         User.find({ username }, async (err, result) => {
             if (err) return next(err);
             let isMatch = await bcrypt.compare(password, result[0].password);

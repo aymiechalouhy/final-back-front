@@ -5,9 +5,9 @@ const userSchema = new Schema({
     email: {
         type: String,
         unique: true,
+        required: true,
         trim: true,
         maxLength: 50,
-        required: true
     },
     username: {
         type: String,
@@ -20,8 +20,8 @@ const userSchema = new Schema({
     phoneNumber: String,
     storeAddress: String,
     role: {
-        type: Boolean,
-        default: false
+        type: String,
+        default: "user"
     },
     token: {
         type: String,

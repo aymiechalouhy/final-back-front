@@ -17,8 +17,8 @@
     text-align: center;
     width: 100%;
 }
-#root > div.main_footer > div.displaying > div.inputData > div.firsttwo > div.colf1 > input[type=text]{
-/* #root>div>div>div.displaying>div>div.firsttwo>div.colf1>input[type=text] { */
+#root > form > div > div.displaying > div.inputData > div.firsttwo > div.colf1 > input[type=text]{
+
     background-color: black;
     border: 2px solid #5d8fc9;
     width: 120%;
@@ -26,7 +26,7 @@
     color: white;
 }
 
-#root > div.main_footer > div.displaying > div.inputData > div.secondtwo > div.colf3 > input[type=text] {
+#root > form > div > div.displaying > div.inputData > div.firsttwo > div.colf2 > input[type=text]{
     background-color: black;
     border: 2px solid #5d8fc9;
     width: 120%;
@@ -39,7 +39,7 @@
     justify-content: space-around;
 }
 
-#root > div.main_footer > div.displaying > div.inputData > div.firsttwo > div.colf2 > input[type=text] {
+#root > form > div > div.displaying > div.inputData > div.secondtwo > div.colf3 > input[type=text] {
     background-color: black;
     border: 2px solid #5d8fc9;
     width: 120%;
@@ -47,7 +47,7 @@
     color: white;
 }
 
-#root > div.main_footer > div.displaying > div.inputData > div.secondtwo > div.colf4 > input[type=text] {
+#root > form > div > div.displaying > div.inputData > div.secondtwo > div.colf4 > input[type=text] {
     background-color: black;
     border: 2px solid #5d8fc9;
     width: 120%;
@@ -55,7 +55,7 @@
     color: white;
 }
 
-#root > div.main_footer > div.displaying > div.inputData > div.lastone > div > input[type=text] {
+#root > form > div > div.displaying > div.inputData > div.lastone > div > input[type=text] {
     background-color: black;
     border: 2px solid #5d8fc9;
     width: 150%;
