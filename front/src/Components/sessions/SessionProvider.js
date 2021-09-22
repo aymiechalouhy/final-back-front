@@ -23,6 +23,7 @@ export default function SessionProvider({ children }) {
     async function signOut() {
         let _id = getCookie('_id');
         await API.post(`signOut`, { _id });
+        
         setSession({ user: {} });
         removeCookie('_id');
         removeCookie('token');
@@ -30,6 +31,7 @@ export default function SessionProvider({ children }) {
     }
 
     async function signIn(user) {
+        console.log(user);
         await API.post(`signIn`, user ).then(res=>{
             const success=res.data.success;
             if(success){

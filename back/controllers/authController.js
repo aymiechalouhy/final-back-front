@@ -31,15 +31,9 @@ class AuthController {
         user.save((err, result) => {
             if (err) return next(err);
             let _id = result._id;
-            let token = jwt.sign({ _id }, "randomString", { expiresIn: 10000 });
-            User.updateOne({ _id }, {
-                $set: { token }
-            }, (err, response) => {
-                if (err) return next(err);
                 User.find({ _id }, (err, data) => {
                     if (err) return next(err);
                     res.json({ success: true, result: data[0] });
-                });
             });
         });
     }

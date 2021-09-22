@@ -3,6 +3,7 @@ import "./LoginPage.css";
 import SessionContext from "../../Components/sessions/SessionContext";
 
 export default function LoginPage() {
+  
   let {
     actions: { signIn },
   } = useContext(SessionContext);
