@@ -77,12 +77,12 @@
 .sn{
     font-size: medium;
     border: 2px solid #5d8fc9;
-    color:white;
+    color:#5d8fc9;
     background-color: black;
 }
 .sn:hover{
     color: black;
-    background-color: white !important;
+    background-color: #5d8fc9 !important;
 }
 
 

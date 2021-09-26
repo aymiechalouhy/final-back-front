@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import API from "../../API";
+import AdminNav from "../AdminNav/AdminNav";
 
 import Dashboard from '../Dashboard/Dashboard';
 
@@ -8,17 +9,32 @@ export default function ListContats() {
     let history = useHistory();
     const [contacts, setContacts] = useState([]);
 
-
-    async function deleteContact(id) {
-        try {
-          await API.delete(`contacts/${id}`);
-          let filter = [...contacts].filter((contacts) => contacts.id !== id);
-          setContacts(filter);
-        } catch (e) {
-          console.log(e);
-        }
-        window.location.reload();
+    function handleDelete(id) {
+        API.delete(`contacts/${id}`).then((res) => {
+          fetchData();
+        });
       }
+      
+      function fetchData() {
+        API.get(`contacts`).then((res) => {
+          let data = res.data;
+          console.log(data);
+          if (data.length) {
+            setContacts(data);
+          }
+        });
+      }
+
+    // async function deleteContact(id) {
+    //     try {
+    //       await API.delete(`contacts/${id}`);
+    //       let filter = [...contacts].filter((contacts) => contacts.id !== id);
+    //       setContacts(filter);
+    //     } catch (e) {
+    //       console.log(e);
+    //     }
+    //     window.location.reload();
+    //   }
     
 
     useEffect(() => {
@@ -34,6 +50,7 @@ export default function ListContats() {
     
     return (
        <>
+       <AdminNav/>
        <Dashboard/>
        <div className="container">
         <div className="table-wrapper">
@@ -66,7 +83,7 @@ export default function ListContats() {
                         <td></td>
                         <td>
                             
-                            <a className="delete" title="Delete" data-toggle="tooltip"><i className="material-icons"  onClick={() => deleteContact(contact._id)}>  </i></a>
+                            <a className="delete" title="Delete" data-toggle="tooltip"><i className="material-icons"  onClick={() => handleDelete(contact._id)}>  </i></a>
                         </td>
                     </tr>   
                      

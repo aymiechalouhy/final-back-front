@@ -24,9 +24,11 @@ class AuthController {
 
     async signUp(req, res, next) {
         let body = req.body;
+
         let salt = await bcrypt.genSalt(10);
         let hashedPassword = await bcrypt.hash(body['password'], salt);
         body['password'] = hashedPassword;
+        
         let user = new User(body);
         user.save((err, result) => {
             if (err) return next(err);

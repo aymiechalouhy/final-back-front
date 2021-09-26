@@ -5,22 +5,27 @@ import AdminNav from '../../Components/AdminNav/AdminNav';
 import Dashboard from '../../Components/Dashboard/Dashboard';
 import './ListShops.css';
 
+
 export default function ListShops() {
     let history = useHistory();
     const [users, setUsers] = useState([]);
 
 
-    async function deleteUser(id) {
-        try {
-          await API.delete(`users/${id}`);
-          let filter = [...users].filter((users) => users.id !== id);
-          setUsers(filter);
-        } catch (e) {
-          console.log(e);
-        }
-        window.location.reload();
+    function handleDelete(id) {
+        API.delete(`users/${id}`).then((res) => {
+          fetchData();
+        });
       }
-    
+      function fetchData() {
+        API.get(`users`).then((res) => {
+          let data = res.data;
+          console.log(data);
+          if (data.length) {
+            setUsers(data);
+          }
+        });
+      }
+
 
     useEffect(() => {
         async function fetchData() {
@@ -58,7 +63,7 @@ export default function ListShops() {
                         <th>Last Name</th>
                         <th>Email</th>
                         <th>Username</th>
-                        <th>Password</th>
+                        {/* <th>Password</th> */}
                         <th>Phone</th>
                         <th>Address</th>
                         <th>Actions</th>
@@ -72,16 +77,16 @@ export default function ListShops() {
                         <td>{user.lastName}</td>
                         <td>{user.email}</td>
                         <td>{user.username}</td>
-                        <td>{user.password}</td>
+                        {/* <td>{user.password}</td> */}
                         <td>{user.phoneNumber}</td>
                         <td>{user.storeAddress}</td>
-                        <td></td>
                         <td>
 							{/* <a className="add" title="Add" data-toggle="tooltip"><i className="material-icons"></i></a> */}
                             <a className="edit" title="Edit" data-toggle="tooltip"><i className="material-icons"  onClick={() =>
                   history.push({ pathname: `/editShops/${user._id}` })
                 }   ></i></a>
-                            <a className="delete" title="Delete" data-toggle="tooltip"><i className="material-icons"  onClick={() => deleteUser(user._id)}>  </i></a>
+                            <a className="delete" title="Delete" data-toggle="tooltip"><i className="material-icons"  onClick={() => handleDelete(user._id)}>  </i></a>
+                                                                                                          
                         </td>
                     </tr>   
                      

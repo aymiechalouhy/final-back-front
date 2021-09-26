@@ -41,8 +41,8 @@
                     margin-right: 16px;
                     font-size: 17px;
                 }
-                
-                #root>div>div.topnav>button {
+
+                #root > div.topnav > button{
                     float: right;
                     padding: 6px 10px;
                     margin-top: 8px;
@@ -51,11 +51,16 @@
                     font-size: 17px;
                     border: black;
                     cursor: pointer;
+                    font-size: large;
                 }
                 
-                #root>div>div.topnav>button:hover {
+                #root > div.topnav > button:hover {
                     color: blue;
+                    font-size: medium;
+                    background-color: rgb(218, 216, 216);
+
                 }
+
                 /* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
                 
                 @media screen and (max-width: 600px) {

@@ -96,6 +96,7 @@ table.table td .add {
 }
 .material-icons{
     color: black;
+    margin-left: 0.5rem;
 }
 .material-icons:hover{
     color: white;

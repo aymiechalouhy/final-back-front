@@ -3,7 +3,7 @@ import API from "../../API";
 import { useHistory } from "react-router-dom";
 
 import SessionContext from "../../Components/sessions/SessionContext";
-import AdminNav from '../../Components/AdminNav/AdminNav';
+import AdminNav from "../../Components/AdminNav/AdminNav";
 import Dashboard from "../../Components/Dashboard/Dashboard";
 import "./InputShops.css";
 
@@ -49,17 +49,19 @@ export default function InputShops() {
       email: state.email,
       phoneNumber: state.phoneNumber,
       storeAddress: state.storeAddress,
-      // isActive: true,
-      _user: _id,
     };
 
-    await API.post(`users`, reqBody).then(
-      history.push({ pathname: "/list" })
-    );
+    console.log(reqBody);
+
+    await API.post(`signUp`, reqBody).then((res) => {
+      const success = res.data.success;
+      if (success) history.push({ pathname: "/list" });
+    });
   }
+
   return (
     <>
-    <AdminNav/>
+      <AdminNav />
       <Dashboard />
       <div className="xxxx">
         <div className="table-wrapper">
@@ -77,7 +79,6 @@ export default function InputShops() {
               value={state.firstName}
               onChange={handleChange}
               className="name"
-
             />
             <br /> <br />
             <label>Last Name</label>
@@ -140,27 +141,23 @@ export default function InputShops() {
               onChange={handleChange}
             />
             <br /> <br />
-         
-          <div className="ssbb">
-            <div className="save">
-              <button
-               className="ssv" type="submit">
-                Save
+            <div className="ssbb">
+              <div className="save">
+                <button className="ssv" type="submit">
+                  Save
+                </button>
+              </div>
 
-                
-              </button>
+              <div className="back">
+                <button
+                  className="bkk"
+                  type="submit"
+                  onClick={() => history.push({ pathname: `/list/` })}
+                >
+                  Back
+                </button>
+              </div>
             </div>
-
-            <div className="back">
-              <button 
-              className="bkk" type="submit"
-              onClick={() =>
-                history.push({ pathname: `/list/` })
-              }  >
-                 Back
-              </button>
-            </div>
-          </div>
           </form>
         </div>
       </div>

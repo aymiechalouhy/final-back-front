@@ -9,9 +9,7 @@ import './Footer.css';
 import cb from '../../image/chooseBest.png';
 
 export default function Footer() {
-    <Popup trigger={<button> Trigger</button>} position="right center">
-    <div>Popup content here !!</div>
-  </Popup>
+  
     const history = useHistory();
 
 
@@ -20,6 +18,8 @@ export default function Footer() {
         user: { _id },
       },
     } = useContext(SessionContext);
+
+    const [response,setResponse] = useState("");
   
     const [state, updateState] = useState({
         name: "",
@@ -28,6 +28,11 @@ export default function Footer() {
         title: "",
         message: "",
       });
+     
+
+    
+
+
 
       function setState(nextState) {
         updateState((previousState) => ({
@@ -120,7 +125,6 @@ export default function Footer() {
                             />
                         </div>
                     </div>
-                    <br />
 
                     <div className="lastone">
                         <div className="colf5">
@@ -137,7 +141,7 @@ export default function Footer() {
                     </div>
 
                     <div className="send">                
-                        <button className="sn" type="submit"> SEND </button>
+                        <button className="sn" > SEND </button>
                     </div>
 
                
@@ -152,6 +156,9 @@ export default function Footer() {
 
         </div>
         </form>
+
+     
+  
     )
  
 }

@@ -11,17 +11,20 @@ export default function ListPost() {
     const [blogs, setBlogs] = useState([]);
 
 
-    async function deleteBlog(id) {
-        try {
-          await API.delete(`blogs/${id}`);
-          let filter = [...blogs].filter((blogs) => blogs.id !== id);
-          setBlogs(filter);
-        } catch (e) {
-          console.log(e);
-        }
-        window.location.reload();
+    function handleDelete(id) {
+        API.delete(`blogs/${id}`).then((res) => {
+          fetchData();
+        });
       }
-    
+      function fetchData() {
+        API.get(`blogs`).then((res) => {
+          let data = res.data;
+          console.log(data);
+          if (data.length) {
+            setBlogs(data);
+          }
+        });
+      }
 
     useEffect(() => {
         async function fetchData() {
@@ -84,15 +87,14 @@ export default function ListPost() {
                         <td>{blog.battery}</td>
                         <td>{blog.price}</td>
                         <td>{blog.quantity}</td>
-                        {/* <td>{blog._User.username}</td>
-                        <td>{blog._User.storeAddress}</td> */}
-                        <td></td>
+                        <td>{blog._User && blog._User.username}</td>
+                        <td>{blog._User && blog._User.storeAddress}</td>
                         <td>
 							{/* <a className="add" title="Add" data-toggle="tooltip"><i className="material-icons"></i></a> */}
                             <a className="edit" title="Edit" data-toggle="tooltip"><i className="material-icons"  onClick={() =>
                   history.push({ pathname: `/editPost/${blog._id}` })
                 }   ></i></a>
-                            <a className="delete" title="Delete" data-toggle="tooltip"><i className="material-icons"  onClick={() => deleteBlog(blog._id)}>  </i></a>
+                            <a className="delete" title="Delete" data-toggle="tooltip"><i className="material-icons"  onClick={() => handleDelete(blog._id)}>  </i></a>
                         </td>
                     </tr>   
                      

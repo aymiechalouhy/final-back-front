@@ -45,7 +45,7 @@ export default function SessionProvider({ children }) {
                     token:result.token,
                     role:result.role
                 } });
-            }
+            }else{console.log("invalid")}
         })
     }
 

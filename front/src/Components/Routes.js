@@ -68,7 +68,6 @@ export default function Routes(props) {
             <PrivateRouteAdmin user={user} path="/listContact" component={ListContats} {...props} />
 
             <PrivateRouteAdmin user={user} path="/list" component={ListShops} {...props} />
-
             <PrivateRouteAdmin user={user} path="/addShops" component={InputShops} {...props} />
             <PrivateRouteAdmin user={user} path="/editShops/:id" component={UpdateShops} {...props} />
 
