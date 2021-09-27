@@ -12,7 +12,7 @@ table {
 .table-title .add-new:hover {
     background-color: white;
     color: #5d8fc9;
-    border: 2px solid black;
+    border: 2px solid #5d8fc9;
 }
 
 .table-wrapper {
@@ -29,7 +29,8 @@ table {
 .table-title h2 {
     margin: 6px 0 0;
     font-size: 22px;
-    color: #5d8fc9;
+    color: black;
+    font-weight: bold;
 }
 .table-title .add-new {
     float: right;
@@ -40,7 +41,9 @@ table {
     min-width: 100px;
     border-radius: 50px;
     line-height: 13px;
+    border-color: #5d8fc9;
 }
+
 .table-title .add-new i {
     margin-right: 4px;
 }
@@ -95,9 +98,19 @@ table.table td .add {
     display: none;
 }
 .material-icons{
-    color: black;
+    color: #5d8fc9;
     margin-left: 0.5rem;
 }
 .material-icons:hover{
+    color: black;
+}
+.table thead th {
+    text-align: center;
+
+    /* color: #5d8fc9; */
     color: white;
+    background-color: #5d8fc9;
+}
+table.table tr th, table.table tr td{
+    border: 1px solid gainsboro;
 }

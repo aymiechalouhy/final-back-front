@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import API from "../../API";
 import Popup from 'reactjs-popup';
 import { useHistory } from "react-router-dom";
-
+import Swal from 'sweetalert2'
 import SessionContext from "../../Components/sessions/SessionContext";
 
 import './Footer.css';
@@ -46,6 +46,17 @@ export default function Footer() {
         setState({ [name]: value });
       }
     
+function alertSwal(){
+    Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Your message has been sent successfully',
+        showConfirmButton: false,
+        timer: 1500
+      })
+}
+
+
       async function handleSave(e) {
         e.preventDefault();
 
@@ -67,7 +78,7 @@ export default function Footer() {
 
     return (
         <form onSubmit={handleSave}>
-        <div className="main_footer">
+        <div className="main_footer" id="footer">
 
             <div className="headerf">
                 <h2>Contact Form</h2>
@@ -141,7 +152,8 @@ export default function Footer() {
                     </div>
 
                     <div className="send">                
-                        <button className="sn" > SEND </button>
+                        <button onClick={alertSwal}
+                        className="sn" > SEND </button>
                     </div>
 
                

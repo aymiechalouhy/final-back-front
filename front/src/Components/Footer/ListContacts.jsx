@@ -66,8 +66,8 @@ export default function ListContats() {
                         <th>First Name </th>
                         <th>Last Name</th>
                         <th>Email</th>
-                        <th>title</th>
-                        <th>message</th>
+                        <th>Title</th>
+                        <th>Message</th>
                         <th>Actions</th>
                     </tr>            
                 </thead>
@@ -80,10 +80,9 @@ export default function ListContats() {
                         <td>{contact.email}</td>
                         <td>{contact.title}</td>
                         <td>{contact.message}</td>
-                        <td></td>
                         <td>
                             
-                            <a className="delete" title="Delete" data-toggle="tooltip"><i className="material-icons"  onClick={() => handleDelete(contact._id)}>  </i></a>
+                  <center><a className="delete" title="Delete" data-toggle="tooltip"><i className="material-icons"  onClick={() => handleDelete(contact._id)}>  </i></a></center>  
                         </td>
                     </tr>   
                      

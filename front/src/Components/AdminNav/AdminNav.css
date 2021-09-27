@@ -13,6 +13,8 @@
 .titleee h2 {
     color: #5d8fc9 !important;
     padding-left: 60px;
+    padding-top: 14px;
+    font-weight: bold;
 }
 
 .signb {
@@ -28,4 +30,12 @@
     color: #5d8fc9;
     background-color: white;
     border: 2px solid #5d8fc9;
+}
+.ss{
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.dd{
+    padding-left: 20px;
 }

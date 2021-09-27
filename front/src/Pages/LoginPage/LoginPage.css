@@ -28,7 +28,7 @@ margin-bottom: 80px;
 }
 
 .formm-signin {
-  max-width: 420px;
+  max-width: 470px;
   padding: 15px 35px 45px;
   margin: 0 auto;
   background-color: white;
@@ -61,6 +61,11 @@ input:nth-child(5){
 		border-radius: 30px !important;
 		background-color: #EBF0FC !important;
 	}
+	#root > div > div > div > form > input:nth-child(2):hover{ 
+		border-radius: 30px !important; 
+		
+	}
+
 	#root > div > div > div > form > input:nth-child(5){
 		border-radius: 30px;
 		/* border-color: black; */

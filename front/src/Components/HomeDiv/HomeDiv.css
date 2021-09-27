@@ -1,6 +1,7 @@
 .con{
     height: 1000px;
     background-color: #5d8fc9;
+  
 }
 .big{
     padding-top: 60px;
@@ -8,6 +9,26 @@
     justify-content: space-between;
     align-items: center;
 }
+#root > div.con > div:nth-child(1){
+    position: relative;
+    animation: first 2s 2;
+}
+
+@keyframes first {
+    from{left:-1000px}
+        to{left:0px}
+}
+
+#root > div.con > div:nth-child(2){
+    animation: second 2s 2;
+    position: relative;
+}
+
+@keyframes second {
+    from{right:-1000px}
+        to{right:0px}
+}
+
 h3 {
-    color: white;
+    color: white !important;
 }

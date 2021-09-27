@@ -18,7 +18,7 @@ export default function Navbar() {
         <a className="active" href="#home">
           Home
         </a>
-        <a href="#contact">Contact</a>
+        <a href="#footer">Contact</a>
         <a onClick={() => history.push({ pathname: "/login" })}>
           {token ? "Dashboard" : "Login"}
         </a>

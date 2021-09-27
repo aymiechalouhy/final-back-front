@@ -9,7 +9,9 @@
                     /* background-color: black; */
                 }
                 /* Style the links inside the navigation bar */
-                
+                html {
+                    scroll-behavior: smooth;
+                  }
                 .topnav a {
                     float: left;
                     display: block;

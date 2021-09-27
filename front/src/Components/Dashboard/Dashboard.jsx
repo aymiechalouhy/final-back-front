@@ -24,7 +24,7 @@ export default function Dashboard() {
                           onClick={() =>
                             history.push({ pathname: `/list` })
                           }  
-                        >Stores</button>
+                        >Shops</button>
                       
 
                     </div>
@@ -38,6 +38,13 @@ export default function Dashboard() {
                             history.push({ pathname: `/listContact` })
                           }  >
                         Contact list</button>
+                    </div>
+                    <div className="fourth">
+                        <button className="dd" type="submitt"
+                         onClick={() =>
+                            history.push({ pathname: `/prof` })
+                          }  >
+                        User Profile</button>
                     </div>
                 </div>
                 <div className="fa">

@@ -12,9 +12,12 @@ export default function ListShops() {
 
 
     function handleDelete(id) {
+      const isTrue = window.confirm("Do you want to delete?");
+
+         if (isTrue){
         API.delete(`users/${id}`).then((res) => {
           fetchData();
-        });
+        }); }
       }
       function fetchData() {
         API.get(`users`).then((res) => {
@@ -46,7 +49,7 @@ export default function ListShops() {
         <div className="table-wrapper">
             <div className="table-title">
                 <div className="row">
-                    <div className="col-sm-8"><h2>Manage <b>Shops</b></h2></div>
+                    <div className="col-sm-8"><h2>Manage <b> Shops</b></h2></div>
                     <hr></hr>
                     <div className="col-sm-4">
                         <button onClick={() =>
@@ -59,8 +62,8 @@ export default function ListShops() {
             <table className="table table-bordered">
                 <thead>
                     <tr>
-                        <th>First Name </th>
-                        <th>Last Name</th>
+                        <th> Name </th>
+                        <th>LastName</th>
                         <th>Email</th>
                         <th>Username</th>
                         {/* <th>Password</th> */}

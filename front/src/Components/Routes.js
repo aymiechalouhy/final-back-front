@@ -15,6 +15,7 @@ import ListRate from "../Components/ManageRate/ListRate";
 import Devices from "../Pages/Devices/Devices";
 import SessionContext from "./sessions/SessionContext";
 import Prof from "../Pages/Prof/Prof";
+import Footer from "../Components/Footer/Footer"; 
 
 
 function PrivateRouteAdmin({ user, component: Comp, ...props }) {
@@ -65,7 +66,7 @@ export default function Routes(props) {
         <Switch>
             <Route path="/" component={HomePage} exact {...props} />
             <PublicRoute user={user} path="/login" component={LoginPage} {...props} />
-            
+            <PublicRoute user={user} path="/footer" component={Footer} {...props} />
          
             {/* <PublicRoute user={user} path="/prof" component={Prof} {...props} /> */}
 
