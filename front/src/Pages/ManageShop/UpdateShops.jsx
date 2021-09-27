@@ -83,7 +83,6 @@ export default function UpdateShops() {
             <h2>kindly enter the following: </h2>{" "}
           </div>
           <hr></hr>
-          <br /> <br />
           <form onSubmit={handleSave} onChange={handleChange}>
             <label>First Name</label>
             <br />

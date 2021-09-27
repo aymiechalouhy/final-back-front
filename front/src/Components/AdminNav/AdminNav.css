@@ -23,7 +23,9 @@
     background-color: #5d8fc9;
     border: none;
     height: 30px;
+    width:90px;
     font-size: large;
+    border-radius: 30px;
 }
 
 .signb:hover {

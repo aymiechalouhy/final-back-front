@@ -86,7 +86,9 @@
     /* padding-right: 40px; */
 }
 
-
+.table-title h2 {
+    color: #5d8fc9 !important;
+}
 
 @media screen and (max-width:640px) {
     .inputData {

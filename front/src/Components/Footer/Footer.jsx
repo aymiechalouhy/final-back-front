@@ -6,7 +6,7 @@ import Swal from 'sweetalert2'
 import SessionContext from "../../Components/sessions/SessionContext";
 
 import './Footer.css';
-import cb from '../../image/chooseBest.png';
+import ccc from '../../image/ccc.png';
 
 export default function Footer() {
   
@@ -87,7 +87,7 @@ function alertSwal(){
 
                 <div className="inputData">
                     <div className="zero">
-                        <img src={cb} className="image1" alt="Team Member" width="70%" heitgh="80%" />
+                        <img src={ccc} className="image1" alt="Team Member" width="70%" heitgh="80%" />
                     </div>
 
                     <div className="firsttwo">

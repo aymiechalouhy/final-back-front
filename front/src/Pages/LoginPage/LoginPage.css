@@ -56,6 +56,7 @@ input:nth-child(5){
 	  padding: 10px;
 	  width: 24.5em;
 	  border: 2px solid white;
+	  outline: none;
 	}
 	#root > div > div > div > form > input:nth-child(2){
 		border-radius: 30px !important;

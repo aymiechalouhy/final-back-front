@@ -69,7 +69,7 @@ export default function InputShops() {
             <h2>kindly enter the following: </h2>{" "}
           </div>
           <hr></hr>
-          <br /> <br />
+        
           <form onSubmit={handleSave}>
             <label>First Name</label>
             <br />
