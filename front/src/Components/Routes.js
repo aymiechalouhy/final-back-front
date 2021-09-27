@@ -13,8 +13,9 @@ import EditPost from  "../Pages/ManagePost/EditPost";
 import AddRate from "../Components/ManageRate/AddRate";
 import ListRate from "../Components/ManageRate/ListRate"; 
 import Devices from "../Pages/Devices/Devices";
-
 import SessionContext from "./sessions/SessionContext";
+import Prof from "../Pages/Prof/Prof";
+
 
 function PrivateRouteAdmin({ user, component: Comp, ...props }) {
     return (
@@ -65,11 +66,19 @@ export default function Routes(props) {
             <Route path="/" component={HomePage} exact {...props} />
             <PublicRoute user={user} path="/login" component={LoginPage} {...props} />
             
+         
+            {/* <PublicRoute user={user} path="/prof" component={Prof} {...props} /> */}
+
+
             <PrivateRouteAdmin user={user} path="/listContact" component={ListContats} {...props} />
+            
+            <PrivateRouteAdmin user={user} path="/prof" component={Prof} {...props} />
 
             <PrivateRouteAdmin user={user} path="/list" component={ListShops} {...props} />
             <PrivateRouteAdmin user={user} path="/addShops" component={InputShops} {...props} />
             <PrivateRouteAdmin user={user} path="/editShops/:id" component={UpdateShops} {...props} />
+            
+
 
             <PrivateRouteUser user={user} path="/add/Post" component={AddPost} {...props} />
             <PrivateRouteUser user={user} path="/listPost" component={ListPost} {...props} />
