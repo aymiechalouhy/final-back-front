@@ -157,11 +157,7 @@ export default function UpdateShops() {
             <br /> <br />
          
           <div className="ssbb">
-            <div className="save">
-              <button className="ssv" type="submit">
-                Save
-              </button>
-            </div>
+          
 
             <div className="back">
               <button 
@@ -170,9 +166,15 @@ export default function UpdateShops() {
             } 
               className="bkk" type="submit">
                  Back
-
+              </button>             
+            </div>
+            <div className="save">
+              <button className="ssv" type="submit">
+                Save
               </button>
             </div>
+
+
           </div>
           </form>
         </div>

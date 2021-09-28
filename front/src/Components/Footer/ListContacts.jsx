@@ -10,9 +10,11 @@ export default function ListContats() {
     const [contacts, setContacts] = useState([]);
 
     function handleDelete(id) {
+        const isTrue = window.confirm("Do you want to delete?");
+        if (isTrue){
         API.delete(`contacts/${id}`).then((res) => {
           fetchData();
-        });
+        }); }
       }
       
       function fetchData() {
@@ -24,18 +26,6 @@ export default function ListContats() {
           }
         });
       }
-
-    // async function deleteContact(id) {
-    //     try {
-    //       await API.delete(`contacts/${id}`);
-    //       let filter = [...contacts].filter((contacts) => contacts.id !== id);
-    //       setContacts(filter);
-    //     } catch (e) {
-    //       console.log(e);
-    //     }
-    //     window.location.reload();
-    //   }
-    
 
     useEffect(() => {
         async function fetchData() {

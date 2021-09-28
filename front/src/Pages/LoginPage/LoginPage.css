@@ -14,6 +14,7 @@ body {
     background-color: #017BFF;
     border: 2px solid transparent !important;
 	border-radius: 30px;
+	outline:none !important;
 }
 
 .btnn-primary:hover {

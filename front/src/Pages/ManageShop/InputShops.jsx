@@ -142,11 +142,7 @@ export default function InputShops() {
             />
             <br /> <br />
             <div className="ssbb">
-              <div className="save">
-                <button className="ssv" type="submit">
-                  Save
-                </button>
-              </div>
+            
 
               <div className="back">
                 <button
@@ -155,6 +151,12 @@ export default function InputShops() {
                   onClick={() => history.push({ pathname: `/list/` })}
                 >
                   Back
+                </button>
+              </div>
+
+              <div className="save">
+                <button className="ssv" type="submit">
+                  Save
                 </button>
               </div>
             </div>

@@ -1,8 +1,10 @@
 import React from "react";
 import './Prof.css'
 
-export default function Prof() {
+import { useHistory } from "react-router-dom";
 
+export default function Prof() {
+    const history = useHistory();
 return (
  <>
 
@@ -38,7 +40,11 @@ return (
                         </div>
                     </div>
                     <div class="col-md-2">
-                        <input type="submit" class="profile-edit-btn" name="btnAddMore" value="Edit Profile"/>
+                        {/* <input type="submit" class="profile-edit-btn" name="btnAddMore" value="Edit Profile"/> */}
+                        <input type="submit" class="profile-edit-btn" name="btnAddMore" value="back"
+                        onClick={() =>
+                            history.push({ pathname: `/list` })
+                          } />
                     </div>
                 </div>
                 <div class="row">

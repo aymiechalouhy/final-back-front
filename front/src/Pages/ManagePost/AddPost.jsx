@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom";
 
 import SessionContext from "../../Components/sessions/SessionContext";
 import AdminNav from '../../Components/AdminNav/AdminNav';
-import Dashboard from "../../Components/Dashboard/Dashboard";
+import UserDash from "../../Components/UserDash/UserDash";
 
 export default function AddPost() {
   const history = useHistory();
@@ -66,16 +66,15 @@ export default function AddPost() {
   return (
     <>
     <AdminNav/>
-      <Dashboard />
+      <UserDash />
       <div className="xxxx">
         <div className="table-wrapper">
           <div className="ti">
             <h2>kindly enter the following: </h2>{" "}
           </div>
           <hr></hr>
-          <br /> <br />
           <form onSubmit={handleSave}>
-            <label>phone Name</label>
+            <label>Phone Name</label>
             <br />
             <input
               type="text"
@@ -116,7 +115,7 @@ export default function AddPost() {
               onChange={handleChange}
             />
             <br /> <br />
-            <label>mainCam</label>
+            <label>Main Camera</label>
             <br />
             <input
               type="text"
@@ -136,7 +135,7 @@ export default function AddPost() {
               onChange={handleChange}
             />
             <br /> <br />
-            <label> sound</label>
+            <label> Sound</label>
             <br />
             <input
               type="text"
@@ -146,7 +145,7 @@ export default function AddPost() {
               onChange={handleChange}
             />
              <br /> <br />
-            <label> battery</label>
+            <label> Battery</label>
             <br />
             <input
               type="text"
@@ -156,7 +155,7 @@ export default function AddPost() {
               onChange={handleChange}
             />
          <br /> <br />
-            <label> price</label>
+            <label> Price</label>
             <br />
             <input
               type="text"
@@ -179,12 +178,7 @@ export default function AddPost() {
          
          
           <div className="ssbb">
-            <div className="save">
-              <button
-               className="ssv" type="submit">
-                Save                
-              </button>
-            </div>
+           
 
             <div className="back">
               <button 
@@ -195,6 +189,14 @@ export default function AddPost() {
                  Back
               </button>
             </div>
+
+            <div className="save">
+              <button
+               className="ssv" type="submit">
+                Save                
+              </button>
+            </div>
+
           </div>
           </form>
         </div>

@@ -4,7 +4,7 @@ import API from "../../API";
 
 import AdminNav from '../../Components/AdminNav/AdminNav';
 
-import Dashboard from '../../Components/Dashboard/Dashboard';
+import UserDash from '../../Components/UserDash/UserDash';
 
 export default function ListPost() {
     let history = useHistory();
@@ -12,9 +12,11 @@ export default function ListPost() {
 
 
     function handleDelete(id) {
-        API.delete(`blogs/${id}`).then((res) => {
-          fetchData();
-        });
+        const isTrue = window.confirm("Do you want to delete?");
+        if (isTrue){
+         API.delete(`blogs/${id}`).then((res) => {
+          fetchData(); 
+        }); }
       }
       function fetchData() {
         API.get(`blogs`).then((res) => {
@@ -40,7 +42,7 @@ export default function ListPost() {
     return (
        <>
        <AdminNav/>
-       <Dashboard/>
+       <UserDash/>
        <div className="container">
         <div className="table-wrapper">
             <div className="table-title">
@@ -68,8 +70,8 @@ export default function ListPost() {
                         <th>battery</th>
                         <th>price</th>
                         <th>quantity</th>
-                        <th>username</th>
-                        <th>Store Address</th>
+                        {/* <th>username</th>
+                        <th>Store Address</th> */}
                         <th>Actions</th>
                     </tr>            
                 </thead>
@@ -87,8 +89,8 @@ export default function ListPost() {
                         <td>{blog.battery}</td>
                         <td>{blog.price}</td>
                         <td>{blog.quantity}</td>
-                        <td>{blog._User && blog._User.username}</td>
-                        <td>{blog._User && blog._User.storeAddress}</td>
+                        {/* <td>{blog._User && blog._User.username}</td>
+                        <td>{blog._User && blog._User.storeAddress}</td> */}
                         <td>
 							{/* <a className="add" title="Add" data-toggle="tooltip"><i className="material-icons"></i></a> */}
                             <a className="edit" title="Edit" data-toggle="tooltip"><i className="material-icons"  onClick={() =>

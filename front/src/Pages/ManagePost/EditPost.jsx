@@ -2,7 +2,7 @@ import React, { useState, useContext, useEffect } from "react";
 import { useHistory, useParams } from "react-router";
 import API from "../../API";
 import AdminNav from '../../Components/AdminNav/AdminNav';
-import Dashboard from "../../Components/Dashboard/Dashboard";
+import UserDash from "../../Components/UserDash/UserDash";
 
 export default function EditPost() {
   let history = useHistory();
@@ -79,16 +79,15 @@ export default function EditPost() {
   return (
     <>
     <AdminNav/>
-      <Dashboard />
+      <UserDash />
       <div className="xxxx">
         <div className="table-wrapper">
           <div className="ti">
             <h2>kindly enter the following: </h2>{" "}
           </div>
           <hr></hr>
-          <br /> <br />
           <form onSubmit={handleSave}>
-            <label>phone Name</label>
+            <label>Phone Name</label>
             <br />
             <input
               type="text"
@@ -129,7 +128,7 @@ export default function EditPost() {
               onChange={handleChange}
             />
             <br /> <br />
-            <label>mainCam</label>
+            <label>Main Camera</label>
             <br />
             <input
               type="text"
@@ -149,7 +148,7 @@ export default function EditPost() {
               onChange={handleChange}
             />
             <br /> <br />
-            <label> sound</label>
+            <label> Sound</label>
             <br />
             <input
               type="text"
@@ -159,7 +158,7 @@ export default function EditPost() {
               onChange={handleChange}
             />
              <br /> <br />
-            <label> battery</label>
+            <label> Battery</label>
             <br />
             <input
               type="text"
@@ -191,12 +190,7 @@ export default function EditPost() {
             <br /> <br />
          
           <div className="ssbb">
-            <div className="save">
-              <button
-               className="ssv" type="submit">
-                Save                
-              </button>
-            </div>
+           
 
             <div className="back">
               <button 
@@ -207,6 +201,16 @@ export default function EditPost() {
                  Back
               </button>
             </div>
+
+            <div className="save">
+              <button
+               className="ssv" type="submit">
+                Save                
+              </button>
+            </div>
+
+
+
           </div>
           </form>
         </div>

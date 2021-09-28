@@ -32,12 +32,14 @@
     border: none;
     font-weight: bold;
     margin-top: 2rem;
+    outline: transparent;
 }
 
 .dd:hover {
     color: black;
-}
+    border-color: red;
 
+}
 .dash {
     display: flex;
 }

@@ -16,6 +16,7 @@ import Devices from "../Pages/Devices/Devices";
 import SessionContext from "./sessions/SessionContext";
 import Prof from "../Pages/Prof/Prof";
 import Footer from "../Components/Footer/Footer"; 
+import Category from "../Pages/Category/Category";
 
 
 function PrivateRouteAdmin({ user, component: Comp, ...props }) {
@@ -51,7 +52,7 @@ function PublicRoute({ user, component: Comp, ...props }) {
     console.log(user.role == "admin" );
     return (
         <Route {...props} render={props => user.token ?
-            <Redirect {...props} to={user.role == "admin" ? "/list" :user.role=="user"?"/listPost":null} /> :
+            <Redirect {...props} to={user.role == "admin" ? "/list" :user.role=="user"?"/Category":null} /> :
             <Comp {...props} />
         } />
     )
@@ -67,7 +68,7 @@ export default function Routes(props) {
             <Route path="/" component={HomePage} exact {...props} />
             <PublicRoute user={user} path="/login" component={LoginPage} {...props} />
             <PublicRoute user={user} path="/footer" component={Footer} {...props} />
-         
+            {/* <PublicRoute user={user} path="/Category" component={Category} {...props} /> */}
             {/* <PublicRoute user={user} path="/prof" component={Prof} {...props} /> */}
 
 
@@ -84,6 +85,8 @@ export default function Routes(props) {
             <PrivateRouteUser user={user} path="/add/Post" component={AddPost} {...props} />
             <PrivateRouteUser user={user} path="/listPost" component={ListPost} {...props} />
             <PrivateRouteUser user={user} path="/editPost/:id" component={EditPost} {...props} />
+
+            <PrivateRouteUser user={user} path="/Category" component={Category} {...props} />
 
             {/* <PublicRoute user={user} path="/add/rate" component={AddRate} {...props} /> */}
             {/* <PublicRoute user={user} path="/listRate" component={ListRate} {...props} /> */}
