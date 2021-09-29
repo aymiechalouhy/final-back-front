@@ -65,6 +65,7 @@ export default function SessionProvider({ children }) {
                         const success = res.data.success;
                         if (success) {
                             const data = res.data.result;
+                            if(data)
                             updateSession({
                                 user: {
                                     _id: data._id,

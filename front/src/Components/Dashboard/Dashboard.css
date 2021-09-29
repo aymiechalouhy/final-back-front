@@ -37,8 +37,10 @@
 
 .dd:hover {
     color: black;
-    border-color: red;
 
+}
+.dd:focus{
+    outline:none;
 }
 .dash {
     display: flex;

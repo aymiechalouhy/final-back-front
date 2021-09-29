@@ -33,6 +33,13 @@
     background-color: white;
     border: 2px solid #5d8fc9;
 }
+.logoutt:focus{
+    outline:none;
+}
+#root > div.adminNav > div.logoutt > button{
+    outline:none;
+}
+
 .ss{
     padding-top: 20px;
     padding-left: 20px;

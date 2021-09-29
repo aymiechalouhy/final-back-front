@@ -43,21 +43,15 @@ export default function ListPost() {
        <>
        <AdminNav/>
        <UserDash/>
-       <div className="container">
-        <div className="table-wrapper">
-            <div className="table-title">
-                <div className="row">
-                    <div className="col-sm-8"><h2>Manage <b>Shops</b></h2></div>
+       <div className="yeahhh" style={{marginLeft:"16rem"}} >
+                  <h2>Manage <b>Shops</b></h2>
                     <hr></hr>
-                    <div className="col-sm-4">
                         <button onClick={() =>
                   history.push({ pathname: `/add/Post/` })
                 }
                         type="button" className="btn btn-info add-new"><i className="fa fa-plus"></i> Add New</button>
-                    </div>
-                </div>
-            </div>
-            <table className="table table-bordered">
+                 
+            <table>
                 <thead>
                     <tr>
                         <th>Phone Name </th>
@@ -93,18 +87,17 @@ export default function ListPost() {
                         <td>{blog._User && blog._User.storeAddress}</td> */}
                         <td>
 							{/* <a className="add" title="Add" data-toggle="tooltip"><i className="material-icons"></i></a> */}
-                            <a className="edit" title="Edit" data-toggle="tooltip"><i className="material-icons"  onClick={() =>
+                            <a title="Edit" data-toggle="tooltip"><i className="material-icons"  onClick={() =>
                   history.push({ pathname: `/editPost/${blog._id}` })
                 }   ></i></a>
-                            <a className="delete" title="Delete" data-toggle="tooltip"><i className="material-icons"  onClick={() => handleDelete(blog._id)}>  </i></a>
+                            <a title="Delete" data-toggle="tooltip"><i className="material-icons"  onClick={() => handleDelete(blog._id)}>  </i></a>
                         </td>
                     </tr>   
                      
                     ))}
                 </tbody>
             </table>
-        </div>
-    </div>    
+          </div>
        </>
     )
 }
