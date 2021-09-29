@@ -1,6 +1,25 @@
-.hl{   
-        border-bottom:6px solid white;
-        height: 800px;
-        margin-left: 5rem;
-        padding: 0%;  
+.hl {
+  border-bottom: 6px solid white;
+  height: 8px;
+  margin-top: -32rem;
+}
+
+.lll{
+        display: flex;
+}
+.ttt{
+        padding-left: 2rem;
+}
+.llabel{
+       
+        width: 200px;
+}
+.ffff{
+        padding-left: 2rem;   
+}
+.labell{
+color: black;
+}
+.hiii{
+        color: black;    
 }

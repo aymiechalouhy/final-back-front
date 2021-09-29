@@ -1,147 +1,341 @@
-import React from 'react';
-import AdminNav from '../../Components/AdminNav/AdminNav';
-import add from '../../image/addimg.jpeg'
-import nokia from "../../image/nokia.png"
-
+import React from "react";
+import AdminNav from "../../Components/AdminNav/AdminNav";
+import add from "../../image/addimg.jpeg";
+import nokia from "../../image/nokia.png";
 // import ListPost from '../ManagePost/ListPost';
-import Footer from '../../Components/Footer/Footer';
+import Footer from "../../Components/Footer/Footer";
+import "./Devices.css";
 
 export default function Devices() {
-
   return (
     <>
-     <AdminNav />
-     <br/> <br/>
-      <div className="lll" style={{display:'flex'}}>
-         <div className="fff">
-         <img src={add} className="immm" alt="Upload Image" width="50%" heitgh="5%" />       
-         <br/>  <br/> 
+      <AdminNav />
+      <br /> <br />
+      <div className="lll">
+        <div className="fff">
+          <img
+            src={add}
+            className="immm"
+            alt="Upload Image"
+            width="50%"
+            heitgh="5%"
+          />
+          <br /> <br />
           <form>
             <input
+            readonly
               type="text"
               name="memory"
               placeholder="Memory:"
-            //   value={state.memory}   
-            //   onChange={handleChange}
+              //   value={state.memory}
+              //   onChange={handleChange}
             />
-            <br />              
+            <br />
             <input
+            readonly
               type="text"
               name="mainCam"
               placeholder="Main Camera:"
-            //   value={state.mainCam}   
-            //   onChange={handleChange}
-            />
-            <br />     
-             <input
-              type="text"
-              name="selfie"
-              placeholder="Selfie:"
-            //   value={state.selfie}   
-            //   onChange={handleChange}
+              //   value={state.mainCam}
+              //   onChange={handleChange}
             />
             <br />
             <input
               type="text"
+              name="selfie"
+              placeholder="Selfie:"
+              //   value={state.selfie}
+              //   onChange={handleChange}
+            />
+            <br />
+            <input
+            readonly
+              type="text"
               name="sound"
               placeholder="Sound: "
-            //   value={state.sound}
-            //   onChange={handleChange}
+              //   value={state.sound}
+              //   onChange={handleChange}
             />
-             <br /> 
-            
+            <br />
             <input
+            readonly
               type="text"
               name="battery"
               placeholder="Battery:"
-            //   value={state.battery}
-            //   onChange={handleChange}
+              //   value={state.battery}
+              //   onChange={handleChange}
             />
-         <br />            
+            <br />
             <input
+            readonly
               type="text"
               name="price"
               placeholder="Price:"
-            //   value={state.price}
-            //   onChange={handleChange}
+              //   value={state.price}
+              //   onChange={handleChange}
             />
-             <br />          
+            <br />
             <input
+            readonly
               type="text"
               name="quantity"
               placeholder="Quantity"
-            //   value={state.quantity}
-   
-            //   onChange={handleChange}
+              //   value={state.quantity}
+
+              //   onChange={handleChange}
             />
-            <br />  <br/> 
-
-              <button className="ssv">  Save  </button>
-              <button className="bkk">
-                 Back
-              </button>
-
+            <br /> <br />
+            <button className="ssv"> Add New </button>
           </form>
+        </div>
+        <div className="sss">
+          <div className="vl"> </div>
+        </div>
+{/* here */}
+        <div className="ttt">
+          <img
+            src={nokia}
+            className="immm"
+            alt="Upload Image"
+            width="50%"
+            heitgh="5%"
+          />
+          <div
+            className="llabel">
+            <label className="hiii" >hellooooooooooooo</label> <br />
+            <label className="hiii">hellooooooooooooo</label> <br />
+            <label className="hiii">hellooooooooooooo</label> <br />
+            <label className="hiii">hellooooooooooooo</label> <br />
+            <label className="hiii">hellooooooooooooo</label> <br />
+            <label className="hiii">hellooooooooooooo</label> <br />
+            <label className="hiii">hellooooooooooooo</label> <br />
+            <label className="hiii">hellooooooooooooo</label> <br />
+            <label className="hiii">hellooooooooooooo</label>
+            <br /> <br />
+     
+
+
+            <a className="edit" title="Edit" data-toggle="tooltip">
+              <i className="material-icons hiii"></i>
+            </a>
+            <a className="delete" title="Delete" data-toggle="tooltip">
+              <i className="material-icons hiii"> </i>
+            </a>
+           
+
           </div>
-          <div className="sss"> 
+        </div>
+{/* here */}
+        <div className="sss">
           <div className="vl"> </div>
-       </div>
+        </div>
+        <div className="ttt">
+          <img
+            src={nokia}
+            className="immm"
+            alt="Upload Image"
+            width="50%"
+            heitgh="5%"
+          />
+          <div
+            className="llabel">
+            <label className="hiii">hellooooooooooooo</label> <br />
+            <label className="hiii">hellooooooooooooo</label> <br />
+            <label className="hiii">hellooooooooooooo</label> <br />
+            <label className="hiii">hellooooooooooooo</label> <br />
+            <label className="hiii">hellooooooooooooo</label> <br />
+            <label className="hiii">hellooooooooooooo</label> <br />
+            <label className="hiii">hellooooooooooooo</label> <br />
+            <label className="hiii">hellooooooooooooo</label> <br />
+            <label className="hiii">hellooooooooooooo</label>
+            <br /> <br />
+    
+            <a className="edit" title="Edit" data-toggle="tooltip">
+              <i className="material-icons hiii"></i>
+            </a>
+            <a className="delete" title="Delete" data-toggle="tooltip">
+              <i className="material-icons hiii"> </i>
+            </a>
 
 
-    <div className="ttt" style={{paddingLeft:"2rem"}}>
-    <img src={nokia} className="immm" alt="Upload Image" width="30%" heitgh="5%" />   
-    <div className="llabel" style={{color:"red",backgroundColor:"white", width:"200px"}}>
-    <label>hellooooooooooooo</label>  <br/>
-    <label>hellooooooooooooo</label>  <br/>
-    <label>hellooooooooooooo</label>  <br/>
-    <label>hellooooooooooooo</label>  <br/>
-    <label>hellooooooooooooo</label>  <br/>
-    <label>hellooooooooooooo</label>  <br/>
-    <label>hellooooooooooooo</label>  <br/>
-    <label>hellooooooooooooo</label>  <br/>
-    <label>hellooooooooooooo</label> 
-   <br/>
-							{/* <a className="add" title="Add" data-toggle="tooltip"><i className="material-icons"></i></a> */}
-                            <a className="edit" title="Edit" data-toggle="tooltip"><i className="material-icons"  ></i></a>
-                            <a className="delete" title="Delete" data-toggle="tooltip"><i className="material-icons" >  </i></a>
-                                                                                                          
-                            </div>  
-</div>
-<div className="sss"> 
+
+          </div>
+        </div>
+{/* here */}
+
+
+
+
+        <div className="sss">
           <div className="vl"> </div>
-       </div>
+        </div>
 
-<div className="ffff"  style={{paddingLeft:"2rem"}}>
-<img src={nokia} className="immm" alt="Upload Image" width="30%" heitgh="5%" />   
-    <div className="llabel" style={{color:"red",backgroundColor:"white", width:"200px"}}>
-    <label>hellooooooooooooo</label>  <br/>
-    <label>hellooooooooooooo</label>  <br/>
-    <label>hellooooooooooooo</label>  <br/>
-    <label>hellooooooooooooo</label>  <br/>
-    <label>hellooooooooooooo</label>  <br/>
-    <label>hellooooooooooooo</label>  <br/>
-    <label>hellooooooooooooo</label>  <br/>
-    <label>hellooooooooooooo</label>  <br/>
-    <label>hellooooooooooooo</label> 
-   <br/>
-							{/* <a className="add" title="Add" data-toggle="tooltip"><i className="material-icons"></i></a> */}
-                            <a className="edit" title="Edit" data-toggle="tooltip"><i className="material-icons"  ></i></a>
-                            <a className="delete" title="Delete" data-toggle="tooltip"><i className="material-icons" >  </i></a>
-                                                                                                          
-                            </div>  
+        <div className="ffff">
+          <img
+            src={nokia}
+            className="immm"
+            alt="Upload Image"
+            width="50%"
+            heitgh="5%"
+          />
+          <div
+            className="llabel" >
+            <label className="hiii">hellooooooooooooo</label> <br />
+            <label className="hiii">hellooooooooooooo</label> <br />
+            <label className="hiii">hellooooooooooooo</label> <br />
+            <label className="hiii">hellooooooooooooo</label> <br />
+            <label className="hiii">hellooooooooooooo</label> <br />
+            <label className="hiii">hellooooooooooooo</label> <br />
+            <label className="hiii">hellooooooooooooo</label> <br />
+            <label className="hiii">hellooooooooooooo</label> <br />
+            <label className="hiii">hellooooooooooooo</label>
+            <br /> <br />
+          
+            <a className="edit" title="Edit" data-toggle="tooltip">
+              <i className="material-icons hiii"></i>
+            </a>
+            <a className="delete" title="Delete" data-toggle="tooltip">
+              <i className="material-icons hiii"> </i>
+            </a>
+           
+          </div>
+        </div>
+      </div>
+      <div className="hl"></div>
+
+
+{/* here */}
+<br/><br/>
+  <div className="lll">
+  
+ {/* here */}
+        <div className="ttt">
+          <img
+            src={nokia}
+            className="immm"
+            alt="Upload Image"
+            width="50%"
+            heitgh="5%"
+          />
+          <div
+            className="llabel">
+            <label className="hiii">hellooooooooooooo</label> <br />
+            <label className="hiii">hellooooooooooooo</label> <br />
+            <label className="hiii">hellooooooooooooo</label> <br />
+            <label className="hiii">hellooooooooooooo</label> <br />
+            <label className="hiii">hellooooooooooooo</label> <br />
+            <label className="hiii">hellooooooooooooo</label> <br />
+            <label className="hiii">hellooooooooooooo</label> <br />
+            <label className="hiii">hellooooooooooooo</label> <br />
+            <label className="hiii">hellooooooooooooo</label>
+            <br /> <br />
+            {/* <a className="add" title="Add" data-toggle="tooltip"><i className="material-icons"></i></a> */}
+            <a className="edit" title="Edit" data-toggle="tooltip">
+              <i className="material-icons hiii"></i>
+            </a>
+            <a className="delete" title="Delete" data-toggle="tooltip">
+              <i className="material-icons hiii"> </i>
+            </a>
+          </div>
+        </div>
+        <div className="ttt">
+          <img
+            src={nokia}
+            className="immm"
+            alt="Upload Image"
+            width="50%"
+            heitgh="5%"
+          />
+          <div
+            className="llabel">
+            <label className="hiii">hellooooooooooooo</label> <br />
+            <label className="hiii">hellooooooooooooo</label> <br />
+            <label className="hiii">hellooooooooooooo</label> <br />
+            <label className="hiii">hellooooooooooooo</label> <br />
+            <label className="hiii">hellooooooooooooo</label> <br />
+            <label className="hiii">hellooooooooooooo</label> <br />
+            <label className="hiii">hellooooooooooooo</label> <br />
+            <label className="hiii">hellooooooooooooo</label> <br />
+            <label className="hiii">hellooooooooooooo</label>
+            <br /> <br />
+            {/* <a className="add" title="Add" data-toggle="tooltip"><i className="material-icons"></i></a> */}
+            <a className="edit" title="Edit" data-toggle="tooltip">
+              <i className="material-icons hiii"></i>
+            </a>
+            <a className="delete" title="Delete" data-toggle="tooltip">
+              <i className="material-icons hiii"> </i>
+            </a>
+          </div>
+        </div>
+     
+
+        <div className="ffff" style={{marginLeft:"6rem"}}>
+          <img
+            src={nokia}
+            className="immm"
+            alt="Upload Image"
+            width="50%"
+            heitgh="5%"
+          />
+          <div
+            className="llabel" >
+            <label className="hiii">hellooooooooooooo</label> <br />
+            <label className="hiii">hellooooooooooooo</label> <br />
+            <label className="hiii">hellooooooooooooo</label> <br />
+            <label className="hiii">hellooooooooooooo</label> <br />
+            <label className="hiii">hellooooooooooooo</label> <br />
+            <label className="hiii">hellooooooooooooo</label> <br />
+            <label className="hiii">hellooooooooooooo</label> <br />
+            <label className="hiii">hellooooooooooooo</label> <br />
+            <label className="hiii">hellooooooooooooo</label>
+            <br /> <br />
+            {/* <a className="add" title="Add" data-toggle="tooltip"><i className="material-icons"></i></a> */}
+            <a className="edit" title="Edit" data-toggle="tooltip">
+              <i className="material-icons hiii"></i>
+            </a>
+            <a className="delete" title="Delete" data-toggle="tooltip">
+              <i className="material-icons hiii"> </i>
+            </a>
+          </div>
+        </div>
+
+
+        <div className="ttt" style={{marginLeft:"6rem"}}>
+          <img 
+            src={nokia}
+            className="immm"
+            alt="Upload Image"
+            width="50%"
+            heitgh="5%"
+          />
+          <div
+            className="llabel">
+            <label className="hiii">hellooooooooooooo</label> <br />
+            <label className="hiii">hellooooooooooooo</label> <br />
+            <label className="hiii">hellooooooooooooo</label> <br />
+            <label className="hiii">hellooooooooooooo</label> <br />
+            <label className="hiii">hellooooooooooooo</label> <br />
+            <label className="hiii">hellooooooooooooo</label> <br />
+            <label className="hiii">hellooooooooooooo</label> <br />
+            <label className="hiii">hellooooooooooooo</label> <br />
+            <label className="hiii">hellooooooooooooo</label>
+            <br /> <br />
+            {/* <a className="add" title="Add" data-toggle="tooltip"><i className="material-icons"></i></a> */}
+            <a className="edit" title="Edit" data-toggle="tooltip">
+              <i className="material-icons hiii"></i>
+            </a>
+            <a className="delete" title="Delete" data-toggle="tooltip">
+              <i className="material-icons hiii"> </i>
+            </a>
+          </div>
+        </div>
 
 
 
+      </div>
+{/* here */}
 
-</div>
-
-
-
-
-
-   </div>
-   <div className="hl"></div>
-              <Footer />
-              </>
-  )
- }
+      <Footer />
+    </>
+  );
+}
