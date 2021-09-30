@@ -52,7 +52,7 @@ app.get('/', (req, res) => {
 app.use('/users', usersRouter);
 app.use('/contacts', contactsRouter);
 app.use('/rates', ratesRouter);
-app.use('/blogs', blogsRouter);
+app.use(blogsRouter);
 app.use(authRouter);
 
 

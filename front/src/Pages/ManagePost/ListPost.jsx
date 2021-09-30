@@ -48,9 +48,9 @@ export default function ListPost() {
            
                 {blogs.map((blog) => (
                     <tr>
-                    <label className="hiii">   Image</label> <img src={`http://localhost:3000/uploads/${blog.image}`} className="hiii"/> <br/>                  
+   <img  className= "iimmgg" src={`http://localhost:3000/uploads/${blog.image}`} className="hiii"/> <br/>                  
                     <label className="hiii">   Phone Name: <label className="hiii">{blog.phoneName}</label> </label> <br/>
-                    <label className="hiii">   Brand <label className="hiii">{blog.brand}</label> </label><br/>
+                    <label className="hiii">   Brand <label className="hiii">{blog.brand}</label></label><br/>
                     <label className="hiii">   Memory  <label className="hiii">{blog.memory}</label> </label><br/>
                     <label className="hiii">   Main Camera <label className="hiii">{blog.mainCam}</label> </label><br/>
                     <label className="hiii">   Selfie  <label className="hiii">{blog.selfie}</label> </label><br/>

@@ -60,21 +60,7 @@ export default function AddPost() {
     body.append("quantity", state.quantity);
     body.append("_user",_id);
 
-    // let reqBody = {
-    //   phoneName: state.phoneName,
-    //   image: fileName,
-    //   brand: state.brand,
-    //   memory: state.memory,
-    //   mainCam: state.mainCam,
-    //   selfie: state.selfie,
-    //   sound: state.sound,
-    //   battery: state.battery,
-    //   price: state.price,
-    //   quantity: state.quantity,
-    //   isActive: true,
-    //   _user: _id,
-    // };
-console.log("vv",body);
+// console.log("vv",body);
     await API.post(`blogs`, body,{
       headers: {
         Accept: "multipart/form-data",

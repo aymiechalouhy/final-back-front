@@ -20,6 +20,14 @@ class BlogsController {
         });
     }
 
+    getFiltarion(req, res, next) {
+        let{price}=req.body;
+        Blog.find({price}).populate('_User').exec((err, response) => {
+            if (err) return next(err);
+            res.status(200).send(response);
+        })
+    }
+
     post(req, res, next) {
         let body = req.body;
         let image = [req.file.filename].toString();

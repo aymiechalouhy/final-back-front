@@ -1,6 +1,5 @@
 import React from 'react';
 import './Dashboard.css';
-
 import { useHistory } from "react-router-dom";
 
 export default function Dashboard() {
