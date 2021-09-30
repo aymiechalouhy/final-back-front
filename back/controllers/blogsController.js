@@ -22,23 +22,48 @@ class BlogsController {
 
     post(req, res, next) {
         let body = req.body;
-        let blog = new Blog(body);
+        let image = [req.file.filename].toString();
+        let blog = new Blog({...body, image});
         blog.save((err, response) => {
             if (err) return next(err);
             res.status(200).send(response);
         });
     }
 
-    put(req, res, next) {
+
+   async  put(req, res, next) {
         let { id } = req.params;
-        let body = req.body; 
-        Blog.updateOne({ _id: id }, {
+
+        if (req.file === undefined) {
+            var image = null
+
+        } else {
+            var image = [req.file.filename].toString();
+
+        }
+        await Blog.findById(id, (err, response) => {
+            if (err) return next(err);
+            console.log("response", response);
+            if (image === null) {
+                image = response.image;
+            }
+        })
+        let body = { ...req.body, image };
+        await Blog.updateOne({ _id: id }, {
             $set: body
         }, (err, response) => {
             if (err) return next(err);
-            res.status(200).send(response);
+            res.status(200).send(response)
         });
     }
+
+
+
+
+
+
+
+     
 
     delete(req, res, next) {
         let { id } = req.params;

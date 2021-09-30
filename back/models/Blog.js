@@ -2,7 +2,7 @@ const { Schema, model } = require('mongoose');
 const blogSchema = new Schema({
  
     phoneName: String,
-    picture: String,
+    image: String,
     brand: String,
     memory: String,
     mainCam: String,

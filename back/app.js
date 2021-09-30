@@ -4,18 +4,29 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var cors = require('cors');
+var multer = require('multer')
 
 require('dotenv').config();
 
 var bodyParser = require("body-parser");
 var mongoose = require('mongoose');
 
+//multer
+const multerStorage = multer.diskStorage({
+  destination: path.join(__dirname, './public/uploads'),
+  filename: (req, file, cb) => {
+    const date = Date.now();
+    const image = date + path.extname(file.originalname)
+    cb(null, image);
+  }
+})
+const upload = multer({ storage: multerStorage });
 
 //here
 var usersRouter = require('./routes/users');
 var contactsRouter = require('./routes/contacts');
 var ratesRouter = require('./routes/rates');
-var blogsRouter = require('./routes/blogs');
+var blogsRouter = require('./routes/blogs')(upload);
 var authRouter = require('./routes/auth');
 
 var app = express();

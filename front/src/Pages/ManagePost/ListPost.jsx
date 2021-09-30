@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import API from "../../API";
-
 import AdminNav from '../../Components/AdminNav/AdminNav';
-
 import UserDash from '../../Components/UserDash/UserDash';
 
 export default function ListPost() {
@@ -42,62 +40,37 @@ export default function ListPost() {
     return (
        <>
        <AdminNav/>
-       <UserDash/>
-       <div className="yeahhh" style={{marginLeft:"16rem"}} >
-                  <h2>Manage <b>Shops</b></h2>
-                    <hr></hr>
-                        <button onClick={() =>
-                  history.push({ pathname: `/add/Post/` })
-                }
-                        type="button" className="btn btn-info add-new"><i className="fa fa-plus"></i> Add New</button>
+       <div className="yeahhh">
+                  
+      <button onClick={() => history.push({ pathname: `/add/Post/` })}
+       type="button" className="btn btn-info add-new"><i className="fa fa-plus"></i> Add New</button>
                  
-            <table>
-                <thead>
-                    <tr>
-                        <th>Phone Name </th>
-                        <th>picture </th>
-                        <th>brand </th>
-                        <th>memory</th>
-                        <th>Main cam</th>
-                        <th>selfie</th>
-                        <th>sound</th>
-                        <th>battery</th>
-                        <th>price</th>
-                        <th>quantity</th>
-                        {/* <th>username</th>
-                        <th>Store Address</th> */}
-                        <th>Actions</th>
-                    </tr>            
-                </thead>
-                <tbody>
-  
+           
                 {blogs.map((blog) => (
                     <tr>
-                        <td>{blog.phoneName}</td>
-                        <td>{blog.picture}</td>
-                        <td>{blog.brand}</td>
-                        <td>{blog.memory}</td>
-                        <td>{blog.mainCam}</td>
-                        <td>{blog.selfie}</td>
-                        <td>{blog.sound}</td>
-                        <td>{blog.battery}</td>
-                        <td>{blog.price}</td>
-                        <td>{blog.quantity}</td>
+                    <label className="hiii">   Image</label> <img src={`http://localhost:3000/uploads/${blog.image}`} className="hiii"/> <br/>                  
+                    <label className="hiii">   Phone Name: <label className="hiii">{blog.phoneName}</label> </label> <br/>
+                    <label className="hiii">   Brand <label className="hiii">{blog.brand}</label> </label><br/>
+                    <label className="hiii">   Memory  <label className="hiii">{blog.memory}</label> </label><br/>
+                    <label className="hiii">   Main Camera <label className="hiii">{blog.mainCam}</label> </label><br/>
+                    <label className="hiii">   Selfie  <label className="hiii">{blog.selfie}</label> </label><br/>
+                    <label className="hiii">   Sound <label className="hiii">{blog.sound}</label> </label><br/>
+                    <label className="hiii">   Battery  <label className="hiii">{blog.battery}</label> </label><br/>
+                    <label className="hiii">   Price <label className="hiii">{blog.price}</label> </label><br/>
+                    <label className="hiii">   Quantity:    <label className="hiii">{blog.quantity}</label> </label> <br/>
                         {/* <td>{blog._User && blog._User.username}</td>
                         <td>{blog._User && blog._User.storeAddress}</td> */}
-                        <td>
-							{/* <a className="add" title="Add" data-toggle="tooltip"><i className="material-icons"></i></a> */}
-                            <a title="Edit" data-toggle="tooltip"><i className="material-icons"  onClick={() =>
+                        <label>
+                            <a title="Edit" data-toggle="tooltip"><i className="material-icons hiii"  onClick={() =>
                   history.push({ pathname: `/editPost/${blog._id}` })
                 }   ></i></a>
-                            <a title="Delete" data-toggle="tooltip"><i className="material-icons"  onClick={() => handleDelete(blog._id)}>  </i></a>
-                        </td>
+                            <a title="Delete" data-toggle="tooltip"><i className="material-icons hiii"  onClick={() => handleDelete(blog._id)}>  </i></a>
+                        </label>
                     </tr>   
-                     
-                    ))}
-                </tbody>
-            </table>
+                       
+                    ))}   
           </div>
+         
        </>
     )
 }

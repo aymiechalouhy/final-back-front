@@ -26,6 +26,7 @@
     width:90px;
     font-size: large;
     border-radius: 30px;
+    cursor: pointer;
 }
 
 .signb:hover {

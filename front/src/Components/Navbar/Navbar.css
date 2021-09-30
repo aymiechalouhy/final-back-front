@@ -62,7 +62,9 @@
                     background-color: rgb(218, 216, 216);
 
                 }
-
+.lgn{
+    cursor: pointer;
+}
                 /* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
                 
                 @media screen and (max-width: 600px) {

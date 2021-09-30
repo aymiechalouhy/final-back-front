@@ -19,7 +19,7 @@ export default function Navbar() {
           Home
         </a>
         <a href="#footer">Contact</a>
-        <a onClick={() => history.push({ pathname: "/login" })}>
+        <a className="lgn" onClick={() => history.push({ pathname: "/login" })}>
           {token ? "Dashboard" : "Login"}
         </a>
         <input type="text" className="navy" placeholder="Search By Price: " />
