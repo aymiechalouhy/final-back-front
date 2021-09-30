@@ -17,9 +17,9 @@ export default function ListPostVisitor(props) {
 
   return (
     <div style={{ display: props.isSearch ? "block" : "none" }}>
-      <div>
+      <div className="row gy-4">
       {posts.map((blog) => (
-                    <tr>
+                    <div className="col-lg-3 col-md-6 align-items-stretch mb-4">
    <img  className= "iimmgg" src={`http://localhost:3000/uploads/${blog.image}`} className="hiii"/> <br/>                  
                     <label className="hiii">   Phone Name: <label className="hiii">{blog.phoneName}</label> </label> <br/>
                     <label className="hiii">   Brand <label className="hiii">{blog.brand}</label></label><br/>
@@ -32,7 +32,7 @@ export default function ListPostVisitor(props) {
                     <label className="hiii">   Quantity:    <label className="hiii">{blog.quantity}</label> </label> <br/>
                         {/* <td>{blog._User && blog._User.username}</td>
                         <td>{blog._User && blog._User.storeAddress}</td> */}
-                    </tr>   
+                    </div>   
                        
                     ))}
       </div>
