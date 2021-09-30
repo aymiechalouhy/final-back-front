@@ -1,5 +1,3 @@
-img {
-    vertical-align: middle;
-    border-style: none;
-    width: 30%;
+.material-icons{
+    cursor: pointer;
 }

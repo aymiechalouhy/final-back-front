@@ -41,16 +41,17 @@ export default function ListPost() {
     return (
        <>
        <AdminNav/>
+       <br/>  <br/>
        <div className="row gy-4">
 
 {/*                   
       <button onClick={() => history.push({ pathname: `/add/Post/` })}
        type="button" className="btn btn-info add-new"><i className="fa fa-plus"></i> Add New</button> */}
                  
-           
+          
                 {blogs.map((blog) => (
                   <div className="col-lg-3 col-md-6  align-items-stretch mb-5">
-   <img   style={{width:"30%"}}  src={`http://localhost:3000/uploads/${blog.image}`} className="hiii"/> <br/>                  
+   <img src={`http://localhost:3000/uploads/${blog.image}`} className="hiii"/> <br/>                  
                     <label className="hiii">   Phone Name: <label className="hiii">{blog.phoneName}</label> </label> <br/>
                     <label className="hiii">   Brand: <label className="hiii">{blog.brand}</label></label><br/>
                     <label className="hiii">   Memory:  <label className="hiii">{blog.memory}</label> </label><br/>
