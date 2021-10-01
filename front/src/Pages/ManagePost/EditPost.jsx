@@ -58,7 +58,7 @@ export default function EditPost() {
       headers: {
         Accept: "multipart/form-data",
       },
-    }).then(history.push({ pathname: "/listPost" }));
+    }).then(()=> {history.push("/listPost")});
   }
   useEffect(() => {
     function fetchData() {

@@ -65,7 +65,7 @@ export default function AddPost() {
       headers: {
         Accept: "multipart/form-data",
       },
-    }).then(history.push({ pathname: "/listPost" }));
+    }).then(()=>{history.push("/listPost")});
   }
   return (
     <>

@@ -48,10 +48,11 @@ export default function UpdateShops() {
       // isActive: true,
     };
 
-    API.put(`users/${id}`, reqBody).then(
-      history.push({ pathname: "/list" })
-    );
+    API.put(`users/${id}`, reqBody)
+    .then(()=> {history.push("/list")});
   }
+
+ 
 
   useEffect(() => {
     function fetchData() {
