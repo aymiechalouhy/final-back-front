@@ -43,26 +43,34 @@ class BlogsController {
         let { id } = req.params;
 
         if (req.file === undefined) {
-            var image = null
+            var image = undefined
 
         } else {
             var image = [req.file.filename].toString();
 
         }
-        await Blog.findById(id, (err, response) => {
-            if (err) return next(err);
-            console.log("response", response);
-            if (image === null) {
-                image = response.image;
-            }
-        })
-        let body = { ...req.body, image };
-        await Blog.updateOne({ _id: id }, {
-            $set: body
-        }, (err, response) => {
-            if (err) return next(err);
-            res.status(200).send(response)
-        });
+
+        if (image==undefined) {
+            
+            let body = { ...req.body};
+            await Blog.updateOne({ _id: id }, {
+                $set: body
+            }, (err, response) => {
+                if (err) return next(err);
+                res.status(200).send(response)
+            });
+            
+        }else{
+
+            let body = { ...req.body, image };
+            await Blog.updateOne({ _id: id }, {
+                $set: body
+            }, (err, response) => {
+                if (err) return next(err);
+                res.status(200).send(response)
+            });
+        }
+        
     }
 
 

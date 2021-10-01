@@ -77,6 +77,8 @@ export default function EditPost() {
           price: data.price,
           quantity: data.quantity,
         });
+        setFileName(data.image);
+
       });
     }
     fetchData();
