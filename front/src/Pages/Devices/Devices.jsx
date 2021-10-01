@@ -27,8 +27,6 @@ export default function Devices() {
               type="text"
               name="memory"
               placeholder="Memory:"
-              //   value={state.memory}
-              //   onChange={handleChange}
             />
             <br />
             <input
@@ -36,16 +34,12 @@ export default function Devices() {
               type="text"
               name="mainCam"
               placeholder="Main Camera:"
-              //   value={state.mainCam}
-              //   onChange={handleChange}
             />
             <br />
             <input
               type="text"
               name="selfie"
               placeholder="Selfie:"
-              //   value={state.selfie}
-              //   onChange={handleChange}
             />
             <br />
             <input
@@ -53,8 +47,6 @@ export default function Devices() {
               type="text"
               name="sound"
               placeholder="Sound: "
-              //   value={state.sound}
-              //   onChange={handleChange}
             />
             <br />
             <input
@@ -62,8 +54,6 @@ export default function Devices() {
               type="text"
               name="battery"
               placeholder="Battery:"
-              //   value={state.battery}
-              //   onChange={handleChange}
             />
             <br />
             <input
@@ -71,8 +61,6 @@ export default function Devices() {
               type="text"
               name="price"
               placeholder="Price:"
-              //   value={state.price}
-              //   onChange={handleChange}
             />
             <br />
             <input
@@ -80,9 +68,6 @@ export default function Devices() {
               type="text"
               name="quantity"
               placeholder="Quantity"
-              //   value={state.quantity}
-
-              //   onChange={handleChange}
             />
             <br /> <br />
             <button className="ssv"> Add New </button>
@@ -91,7 +76,6 @@ export default function Devices() {
         <div className="sss">
           <div className="vl"> </div>
         </div>
-{/* here */}
         <div className="ttt">
           <img
             src={nokia}

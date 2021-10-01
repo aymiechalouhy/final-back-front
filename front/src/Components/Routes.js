@@ -51,7 +51,7 @@ function PrivateRoute({ user, component: Comp, ...props }) {
 function PublicRoute({ user, component: Comp, ...props }) {
     return (
         <Route {...props} render={props => user.token ?
-            <Redirect {...props} to={user.role == "admin" ? "/list" :user.role=="user"?"/Category":null} /> :
+            <Redirect {...props} to={user.role == "admin" ? "/list" :user.role=="user"?"/listPost":null} /> :
             <Comp {...props} />
         } />
     )

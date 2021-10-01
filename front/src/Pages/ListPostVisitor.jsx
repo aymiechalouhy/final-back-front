@@ -29,11 +29,10 @@ export default function ListPostVisitor(props) {
                     <label className="hiii">   Sound <label className="hiii">{blog.sound}</label> </label><br/>
                     <label className="hiii">   Battery  <label className="hiii">{blog.battery}</label> </label><br/>
                     <label className="hiii">   Price <label className="hiii">{blog.price}</label> </label><br/>
-                    <label className="hiii">   Quantity:    <label className="hiii">{blog.quantity}</label> </label> <br/>
-                        {/* <td>{blog._User && blog._User.username}</td>
-                        <td>{blog._User && blog._User.storeAddress}</td> */}
-                    </div>   
-                       
+                    <label className="hiii">   Quantity:<label className="hiii">{blog.quantity}</label> </label> <br/>
+                   <label className="hiii">   user: <label className="hiii">  {blog._User && blog._User.username}</label> </label> <br/>
+                    <label className="hiii"> Store Address: <label className="hiii">{blog._User && blog._User.storeAddress}</label></label> <br/>
+                    </div>                       
                     ))}
       </div>
     </div>

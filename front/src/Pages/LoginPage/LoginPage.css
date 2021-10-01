@@ -1,9 +1,15 @@
 body {
     background-color: #5d8fc9;
 }
+button{
+	cursor:pointer;
+}
 
 .wel{
     color: black;
+}
+img{
+	cursor:pointer;
 }
 .btnn-primary {
 	font-size: larger;

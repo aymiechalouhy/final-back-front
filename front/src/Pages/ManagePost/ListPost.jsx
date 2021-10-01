@@ -4,6 +4,7 @@ import { useHistory } from "react-router-dom";
 import API from "../../API";
 import AdminNav from '../../Components/AdminNav/AdminNav';
 import UserDash from '../../Components/UserDash/UserDash';
+import addimg from "../../image/addimg.jpeg"
 
 export default function ListPost() {
     let history = useHistory();
@@ -43,15 +44,28 @@ export default function ListPost() {
        <AdminNav/>
        <br/>  <br/>
        <div className="row gy-4">
+       <div className="col-lg-3 col-md-6  align-items-stretch mb-5">
 
-{/*                   
-      <button onClick={() => history.push({ pathname: `/add/Post/` })}
-       type="button" className="btn btn-info add-new"><i className="fa fa-plus"></i> Add New</button> */}
-                 
+          <img  style={{paddingLeft:"2rem", paddingTop:"8rem"}}
+            src={addimg}
+            onClick={() =>history.push({ pathname: `/add/post` })}
+            alt="Upload Image"
+            width="200px"
+            heitgh="200px"
           
+          />
+            <br/>
+            <form style={{paddingLeft:"4rem"}}>
+             <br /> <br />
+             <button 
+           className="ssv" onClick={() =>
+                            history.push({ pathname: `/add/post` })
+                          } > Add New </button>  
+          </form>
+          </div>
                 {blogs.map((blog) => (
                   <div className="col-lg-3 col-md-6  align-items-stretch mb-5">
-   <img src={`http://localhost:3000/uploads/${blog.image}`} className="hiii"/> <br/>                  
+   <img src={`http://localhost:3000/uploads/${blog.image}`} className="hiii"/> <br/>  <br/>                  
                     <label className="hiii">   Phone Name: <label className="hiii">{blog.phoneName}</label> </label> <br/>
                     <label className="hiii">   Brand: <label className="hiii">{blog.brand}</label></label><br/>
                     <label className="hiii">   Memory:  <label className="hiii">{blog.memory}</label> </label><br/>
