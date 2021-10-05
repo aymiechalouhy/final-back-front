@@ -45,25 +45,10 @@ export default function HomeDiv() {
               />{" "}
             </center>
           </div>
-          
-          {/* <div className="small">
-            <center>
-              <h3>OPPO</h3>
-            </center>
-            <center>
-              {" "}
-              <img
-                src={hu}
-                className="image1"
-                alt="Team Member"
-                width="80%"
-                heitgh="80%"
-              />{" "}
-            </center>
-          </div> */}
+       
            <div className="small">
             <center>
-              <h3>TECNO</h3>
+              <h3> SONY</h3>
             </center>
             <center>
               {" "}
@@ -72,13 +57,12 @@ export default function HomeDiv() {
                 className="image1"
                 alt="Team Member"
                 width="80%"
-                // heitgh="40%"
               />{" "}
             </center>
           </div>
           <div className="small">
             <center>
-              <h3>OPPO</h3>
+              <h3> NOKIA</h3>
             </center>
             <center>
               {" "}
@@ -91,21 +75,6 @@ export default function HomeDiv() {
               />{" "}
             </center>
           </div>
-          {/* <div className="small">
-            <center>
-              <h3>TECNO</h3>
-            </center>
-            <center>
-              {" "}
-              <img
-                src={tecno}
-                className="image1"
-                alt="Team Member"
-                width="40%"
-                heitgh="40%"
-              />{" "}
-            </center>
-          </div> */}
         </div>
         <div className="big">
           <div className="small">
@@ -125,7 +94,7 @@ export default function HomeDiv() {
           </div>
           <div className="small">
             <center>
-              <h3>NOKIA</h3>
+              <h3>TECNO</h3>
             </center>
             <center>
               {" "}
@@ -140,7 +109,7 @@ export default function HomeDiv() {
           </div>
           <div className="small">
             <center>
-              <h3>SONY</h3>
+              <h3>OPPO</h3>
             </center>
             <center>
               {" "}
@@ -149,7 +118,6 @@ export default function HomeDiv() {
                 className="image1"
                 alt="Team Member"
                 width="80%"
-                // heitgh="40%"
               />{" "}
             </center>
           </div>

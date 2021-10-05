@@ -97,7 +97,7 @@ export default function AddPost() {
               className="name"
               onChange={onChangeFile}
             />
-            <br /> <br />
+            {/* <br /> <br />
             <label> Brand </label>
             <br />
             <input
@@ -106,7 +106,7 @@ export default function AddPost() {
               value={state.brand}
               className="name"
               onChange={handleChange}
-            />
+            /> */}
             <br /> <br />
             <label> Memory</label>
             <br />

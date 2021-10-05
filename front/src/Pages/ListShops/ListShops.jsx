@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import API from "../../API";
+import Swal from 'sweetalert2'
 import AdminNav from '../../Components/AdminNav/AdminNav';
 import Dashboard from '../../Components/Dashboard/Dashboard';
 import './ListShops.css';
@@ -10,15 +11,39 @@ export default function ListShops() {
     let history = useHistory();
     const [users, setUsers] = useState([]);
 
+    function alertSwald(id){
 
-    function handleDelete(id) {
-      const isTrue = window.confirm("Do you want to delete?");
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+          }).then(async(result) => {
+            if (result.isConfirmed) 
+            {  
+                 await API.delete(`users/${id}`).then((res) => {
+                          fetchData();
+                        });
+              Swal.fire(
+                'Deleted!',
+                'Your file has been deleted.',
+                'success'
+              )
+            }
+          })
+        }
+    // function handleDelete(id) {
+    //   const isTrue = window.confirm("Do you want to delete?");
 
-         if (isTrue){
-        API.delete(`users/${id}`).then((res) => {
-          fetchData();
-        }); }
-      }
+    //      if (isTrue){
+    //     API.delete(`users/${id}`).then((res) => {
+    //       fetchData();
+    //     }); }
+    //   }
+
       function fetchData() {
         API.get(`users`).then((res) => {
           let data = res.data;
@@ -88,8 +113,8 @@ export default function ListShops() {
                             <a className="edit" title="Edit" data-toggle="tooltip"><i className="material-icons"  onClick={() =>
                   history.push({ pathname: `/editShops/${user._id}` })
                 }   ></i></a>
-                            <a className="delete" title="Delete" data-toggle="tooltip"><i className="material-icons"  onClick={() => handleDelete(user._id)}>  </i></a>
-                                                                                                          
+                            {/* <a className="delete" title="Delete" data-toggle="tooltip"><i className="material-icons"  onClick={() => handleDelete(user._id)}>  </i></a> */}
+                            <a className="delete" title="Delete" data-toggle="tooltip"><i className="material-icons"  onClick={() => alertSwald(user._id)}>  </i></a>                                                                                            
                         </td>
                     </tr>   
                      

@@ -6,7 +6,7 @@ button{
 }
 
 .wel{
-    color: black;
+    color: #017BFF;
 }
 img{
 	cursor:pointer;
@@ -46,12 +46,12 @@ margin-bottom: 80px;
 	color: gray;
 }
 input:nth-child(2){
-	color: black !important;
+	color: #017BFF !important;
 	font-weight: bold;
 }
 
 input:nth-child(5){
-	color: black !important;
+	color: #017BFF !important;
 	font-weight: bold;
 }
 

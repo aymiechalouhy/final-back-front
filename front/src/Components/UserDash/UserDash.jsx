@@ -27,6 +27,15 @@ export default function UserDash() {
               Devices
             </button>
           </div>
+          <div className="secondd">
+            <button
+              className="dd"
+              type="submitt"
+              onClick={() => history.push({ pathname: `/listPost` })}
+            >
+             User Profile
+            </button>
+          </div>
         </div>
         <div className="fa">
           <div className="vl"></div>

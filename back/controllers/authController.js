@@ -20,7 +20,7 @@ class AuthController {
         } else {
             res.json({ success: false })
         }
-    }
+          }
 
     async signUp(req, res, next) {
         let body = req.body;

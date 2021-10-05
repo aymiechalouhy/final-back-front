@@ -51,9 +51,6 @@ export default function UpdateShops() {
     API.put(`users/${id}`, reqBody)
     .then(()=> {history.push("/list")});
   }
-
- 
-
   useEffect(() => {
     function fetchData() {
       API.get(`users/${id}`).then((res) => {

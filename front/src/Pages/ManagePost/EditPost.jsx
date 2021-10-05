@@ -114,7 +114,7 @@ export default function EditPost() {
               onChange={onChangeFile}
             />
             <br /> <br />
-            <label> Brand </label>
+            {/* <label> Brand </label>
             <br />
             <input
               type="text"
@@ -123,7 +123,7 @@ export default function EditPost() {
               className="name"
               onChange={handleChange}
             />
-            <br /> <br />
+            <br /> <br /> */}
             <label> Memory</label>
             <br />
             <input
@@ -174,7 +174,7 @@ export default function EditPost() {
               onChange={handleChange}
             />
             <br /> <br />
-            <label> price</label>
+            <label> Price</label>
             <br />
             <input
               type="text"

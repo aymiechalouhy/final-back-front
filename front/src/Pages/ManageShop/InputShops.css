@@ -26,6 +26,9 @@ label{
     background-color: #5d8fc9;
     border: 2px solid white !important;
 }
+.ssv:focus{
+    outline: none;
+}
 .ssv:hover{ 
 	color: #5d8fc9 ;
     background-color: white;
@@ -43,6 +46,9 @@ label{
     color: #5d8fc9 ;
     background-color: white;
     border: 2px solid #5d8fc9 !important;
+}
+.bkk:focus{
+outline:none;
 }
 hr{
     border: 2px solid #5d8fc9;

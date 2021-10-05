@@ -18,8 +18,6 @@ export default function Footer() {
         user: { _id },
       },
     } = useContext(SessionContext);
-
-    const [response,setResponse] = useState("");
   
     const [state, updateState] = useState({
         name: "",
